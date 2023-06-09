@@ -1,13 +1,16 @@
 #pragma once
 #include "window.hpp"
+#include "pipeline.hpp"
 
 namespace se {
     class game {
-        int WIDTH = 1600;
-        int HEIGHT = 900; 
+        public:
+         int WIDTH = 1600;
+         int HEIGHT = 900;
+         void run();
 
-        seWindow gameWindow{WIDTH, HEIGHT, "SE GAME"};
-
-        public: void run();
+        private:
+         seWindow gameWindow{WIDTH, HEIGHT, "SE GAME"};
+         sePipeline gamePipeline{"shaders/simple_shader.vert.spv", "shaders/simple_shader.frag.spv"};
     };
 }
