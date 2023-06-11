@@ -23,6 +23,8 @@ namespace se {
             return glfwWindowShouldClose(window);
          }           
 
+         void createWindowSurface(VkInstance instance, VkSurfaceKHR *surface);
+
         void initWindow();
     };
 }
